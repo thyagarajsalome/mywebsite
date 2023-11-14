@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="./style.css">
-  <title>Paint Visualizer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@300&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <title>Paint Visualizer</title>
 </head>
 <body>
 
@@ -31,9 +33,6 @@
     <section id="previewAndEdit">
       <h2>Preview and Edit</h2>
       <div id="colorPreview" class="colorPreview">
-
-
-
         <!-- Realistic color preview will be displayed here -->
       </div>
       <div id="editOptions" class="editOptions">
@@ -46,66 +45,6 @@
     <p>&copy; 2023 Paint Visualizer</p>
   </footer>
 
-  <script src="app.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-  // Sample colors
-  const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6'];
-
-  // Dynamically generate color options
-  const colorPalette = document.getElementById('colorPalette');
-  colors.forEach(color => {
-    const colorOption = document.createElement('div');
-    colorOption.classList.add('colorOption');
-    colorOption.style.backgroundColor = color;
-    colorOption.addEventListener('click', () => selectColor(color));
-    colorPalette.appendChild(colorOption);
-  });
-
-  // Function to handle color selection
-  function selectColor(color) {
-    // Update room preview and perform any other necessary actions
-    const roomCanvas = document.getElementById('roomCanvas');
-    roomCanvas.style.backgroundColor = color;
-
-    // Update color preview
-    const colorPreview = document.getElementById('colorPreview');
-    colorPreview.style.backgroundColor = color;
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  // Sample colors
-  const colors = [
-    '#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6',
-    '#1abc9c', '#d35400', '#27ae60', '#8e44ad', '#c0392b',
-    
-    
-    // Add more colors as needed
-  ];
-
-  // Dynamically generate color options
-  const colorPalette = document.getElementById('colorPalette');
-  colors.forEach(color => {
-    const colorOption = document.createElement('div');
-    colorOption.classList.add('colorOption');
-    colorOption.style.backgroundColor = color;
-    colorOption.addEventListener('click', () => selectColor(color));
-    colorPalette.appendChild(colorOption);
-  });
-
-  // Function to handle color selection
-  function selectColor(color) {
-    // Update room preview and perform any other necessary actions
-    const roomCanvas = document.getElementById('roomCanvas');
-    roomCanvas.style.backgroundColor = color;
-
-    // Update color preview
-    const colorPreview = document.getElementById('colorPreview');
-    colorPreview.style.backgroundColor = color;
-  }
-});
-
-  </script>
+  <script src="./main.js"></script>
 </body>
 </html>

@@ -1,12 +1,10 @@
-/* Common styles for all devices */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f2f2f2;
+  background-color: #fff;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
 }
 
 header {
@@ -14,56 +12,18 @@ header {
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
 }
 
 h1 {
   margin: 0;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
 main {
-  padding: 80px 20px 20px; /* Adjust padding to accommodate fixed header */
+  padding: 20px;
 }
 
 section {
   margin-bottom: 40px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 h2 {
@@ -73,12 +33,13 @@ h2 {
 .colorPalette {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .colorOption {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
@@ -100,22 +61,7 @@ h2 {
 .editOptions {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: #2ecc71;
-  transform: scale(1.1);
+  margin-top: 10px;
 }
 
 footer {
@@ -123,50 +69,20 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
-/* Responsive Styles */
-@media only screen and (max-width: 768px) {
-  main {
-    padding-top: 60px;
-  }
-
-  section {
-    margin-bottom: 20px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  main {
-    padding-top: 40px;
-  }
-
-  section {
-    padding: 10px;
-  }
-
-  .colorPalette {
-    flex-direction: column;
-  }
-
+@media (max-width:768px)  {
   .colorOption {
-    margin-bottom: 10px;
-  }
-}
-@media (max-width: 600px) {
-  body {
-    background-color: blue;
-  }
-  main {
-    width: 80vw;
-  }
-  
-  h1 {
-    font-size: 10vw;
-  }
-  
+    width: 50px;
+    height:50px;
+    
+      }
 }
 
+@media (min-width:768px) and (min-width: 1024px)  {
+  .colorOption {
+    width: 100px;
+    height:100px;
+    
+      }
+}
